@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/artist_image"
+            android:src="@drawable/app_icon"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="2dp"
+            android:adjustViewBounds="false"
+            android:scaleType="centerCrop" />
+
+        <com.yellowsoft.radioapp.MyTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bader Alshuaibi"
+            android:id="@+id/artist_name"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/pop_up_menu"
+        android:src="@drawable/pop_up_menu_dots"
+        android:layout_margin="5dp" />
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">DanDen</string>
+
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="error_player" translatable="false">There was an error initializing the YouTubePlayer (%1$s)</string>
+    <string name="email" translatable="false">Email Address</string>
+    <string name="username" translatable="false">Username</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="sign_up" translatable="false">Sign Up</string>
+    <string name="log_in" translatable="false">Sign In</string>
+    <string name="save" translatable="false">save</string>
+    <string name="cancel" translatable="false">cancel</string>
+    <string name="crop" translatable="false">crop</string>
+    <string name="gcm_unregistered" translatable="false">From GCM: device successfully unregistered!</string>
+    <string name="gcm_registered" translatable="false">From GCM: device successfully registered!</string>
+    <string name="gcm_message" translatable="false">From GCM: you got message!</string>
+    <string name="gcm_error" translatable="false">From GCM: error (%1$s).</string>
+    <string name="gcm_recoverable_error" translatable="false">From GCM: recoverable error (%1$s).</string>
+    <string name="gcm_deleted" translatable="false">From GCM: server deleted %1$d pending messages!</string>
+    <string name="server_registering" translatable="false">Trying (attempt %1$d/%2$d) to register device on Demo Server.</string>
+    <string name="server_registered" translatable="false">From Demo Server: successfully added device!</string>
+    <string name="server_unregistered" translatable="false">From Demo Server: successfully removed device!</string>
+    <string name="server_register_error" translatable="false">Could not register device on Demo Server after %1$d attempts.</string>
+    <string name="server_unregister_error" translatable="false">Could not unregister device on Demo Server (%1$s).</string>
+
+
+</resources>

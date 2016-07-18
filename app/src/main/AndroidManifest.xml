@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yellowsoft.radioapp" >
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <permission
+        android:name="com.yellowsoft.radioapp.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.yellowsoft.radioapp.permission.C2D_MESSAGE" />
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".YoutubePlayer"
+            android:screenOrientation="portrait">
+                </activity>
+
+        <activity android:name=".NavigationActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait">
+                    </activity>
+        <activity android:name=".AdvertisementActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ImageEditActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".SplashScreen"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".SplashScreenActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".SlidingUpPanelTest" >
+                    </activity>
+        <activity
+            android:name=".AndroidBuildingMusicPlayerActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:name=".PlayListActivity" />
+                <activity android:name=".MenuActivity" >
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".MyActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <service
+            android:enabled="true"
+            android:name="com.yellowsoft.radioapp.myPlayService" />
+        <!--<meta-data-->
+            <!--android:name="com.google.android.gms.version"-->
+            <!--android:value="@integer/google_play_services_version" />-->
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.yellowsoft.radioapp"/>
+            </intent-filter>
+        </receiver>
+        <service android:name=".GCMIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+
+
+    </application>
+
+</manifest>

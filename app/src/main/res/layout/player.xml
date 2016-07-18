@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/player_bg"
+    android:id="@+id/ff">
+
+    <android.support.v4.widget.SlidingPaneLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/SlidingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="#c8545454">
+
+            <ListView
+                android:id="@+id/MenuList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null">
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#00000000"
+            android:orientation="vertical" >
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:background="#19ffffff"
+                android:showDividers="beginning|middle|end"
+                android:divider="@drawable/divider_header_icons_space" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/menu_icon"
+                    android:src="@drawable/menu_icon" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView22"
+                    android:src="@drawable/back_arrow" />
+
+                <com.yellowsoft.radioapp.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DanDen"
+                    android:id="@+id/textView17"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:ellipsize="end" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView23"
+                    android:src="@drawable/search_icon"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView24"
+                    android:src="@drawable/search_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/btn_playlist"
+                    android:background="@null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView4"
+                    android:src="@drawable/banner_ad"
+                    android:adjustViewBounds="true" />
+            </LinearLayout>
+
+            <com.yellowsoft.radioapp.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Songs"
+                android:id="@+id/textView3"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/scrollView"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/divider_songs_list_line"
+                    android:showDividers="beginning|middle"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:dividerPadding="10dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:showDividers="middle"
+                        android:divider="@drawable/divider_songs_list_otion"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/imageView5"
+                            android:src="@drawable/aa" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_weight="1">
+
+                            <com.yellowsoft.radioapp.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bader Alshuaibi"
+                                android:id="@+id/textView4"
+                                android:layout_marginBottom="2dp"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp" />
+
+                            <com.yellowsoft.radioapp.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tadry Habebe"
+                                android:id="@+id/textView5"
+                                android:layout_marginTop="2dp"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:showDividers="beginning|middle|end"
+                            android:divider="@drawable/divider_songs_list_otion">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:id="@+id/imageView6"
+                                android:src="@drawable/download"
+                                android:layout_weight="1"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:id="@+id/imageView7"
+                                android:src="@drawable/youtube_link" />
+
+                            <com.yellowsoft.radioapp.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="iTunes"
+                                android:id="@+id/textView6"
+                                android:textColor="#FFFFFF" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:showDividers="middle"
+                        android:divider="@drawable/divider_songs_list_otion"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp" >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/imageView8"
+                            android:src="@drawable/aa" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bader Alshuaibi"
+                                android:id="@+id/textView7"
+                                android:layout_marginBottom="2dp"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp" />
+
+                            <com.yellowsoft.radioapp.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tadry Habebe"
+                                android:id="@+id/textView8"
+                                android:layout_marginTop="2dp"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:showDividers="beginning|middle|end"
+                            android:divider="@drawable/divider_songs_list_otion" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:id="@+id/imageView9"
+                                android:src="@drawable/download"
+                                android:layout_weight="1"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:id="@+id/imageView10"
+                                android:src="@drawable/youtube_link" />
+
+                            <com.yellowsoft.radioapp.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="iTunes"
+                                android:id="@+id/textView9"
+                                android:textColor="#FFFFFF" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:showDividers="middle"
+                        android:divider="@drawable/divider_songs_list_otion"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp" >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/imageView11"
+                            android:src="@drawable/aa" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_weight="1" >
+
+                            <com.yellowsoft.radioapp.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bader Alshuaibi"
+                                android:id="@+id/textView10"
+                                android:layout_marginBottom="2dp"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp" />
+
+                            <com.yellowsoft.radioapp.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tadry Habebe"
+                                android:id="@+id/textView11"
+                                android:layout_marginTop="2dp"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:showDividers="beginning|middle|end"
+                            android:divider="@drawable/divider_songs_list_otion" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:id="@+id/imageView12"
+                                android:src="@drawable/download"
+                                android:layout_weight="1"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:id="@+id/imageView13"
+                                android:src="@drawable/youtube_link" />
+
+                            <com.yellowsoft.radioapp.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="iTunes"
+                                android:id="@+id/textView12"
+                                android:textColor="#FFFFFF" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.yellowsoft.radioapp.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DanDen Artist"
+                            android:id="@+id/textView14"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp"
+                            android:layout_margin="5dp" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:divider="@drawable/divider_songs_list_otion"
+                            android:showDividers="beginning|middle|end"
+                            android:gravity="center_horizontal">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:id="@+id/imageView16"
+                                    android:src="@drawable/aa"
+                                    android:layout_marginBottom="2dp"
+                                    android:adjustViewBounds="true" />
+
+                                <com.yellowsoft.radioapp.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bader Alshuaibi"
+                                    android:id="@+id/textView15"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textColor="#FFFFFF" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" >
+
+                                <ImageView
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:id="@+id/imageView17"
+                                    android:src="@drawable/aa"
+                                    android:layout_marginBottom="2dp"
+                                    android:adjustViewBounds="true" />
+
+                                <com.yellowsoft.radioapp.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bader Alshuaibi"
+                                    android:id="@+id/textView16"
+                                    android:layout_gravity="center_horizontal"
+                                    android:textColor="#FFFFFF" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:showDividers="beginning"
+                android:divider="@drawable/divider_songs_list_line"
+                android:dividerPadding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:showDividers="middle"
+                        android:divider="@drawable/divider_songs_list_otion"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp" >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/imageView14"
+                            android:src="@drawable/aa" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:id="@+id/imageView15"
+                            android:src="@drawable/img_btn_pause_pressed"
+                            android:layout_gravity="center_vertical" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_weight="1" >
+
+                            <com.yellowsoft.radioapp.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bader Alshuaibi - Tara Zahga"
+                                android:id="@+id/textView13"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:layout_gravity="center_vertical"
+                                android:singleLine="true"
+                                android:ellipsize="end" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.SlidingPaneLayout>
+
+</RelativeLayout>

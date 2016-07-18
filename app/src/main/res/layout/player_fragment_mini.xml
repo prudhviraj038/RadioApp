@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/gg">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:showDividers="beginning">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/player_mini"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:civ_border_color="#FFFFFF"
+                    app:civ_border_width="2dp"
+                    android:id="@+id/songThumbnailSmall"
+                    android:src="@drawable/aa"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/play_btn_mini"
+                    android:src="@drawable/btn_play"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:adjustViewBounds="true" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnPreviousMini"
+                    android:src="@drawable/btn_previous"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:adjustViewBounds="true" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+                    <com.yellowsoft.radioapp.MyTextView
+                        android:text="Bader Alshuaibi - Tara Zahga"
+                        android:id="@+id/song_name_mini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:paddingLeft="15dip"
+                        android:paddingRight="15dip"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:freezesText="true"/>
+                                    </LinearLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/btnNextNini"
+                    android:src="@drawable/btn_next"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:adjustViewBounds="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:id="@+id/player_full"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <!-- Player Header -->
+
+            <!-- Song Thumbnail Image -->
+
+            <ViewFlipper
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/lyrics_flipper" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.daimajia.slider.library.SliderLayout
+                                android:id="@+id/slider"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                />
+                            <com.daimajia.slider.library.Indicators.PagerIndicator
+                                android:id="@+id/custom_indicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@+id/slider"
+                                android:layout_marginTop="-20dp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/songThumbnail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center">
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/adele"
+                                    android:id="@+id/album_art"
+                                    android:layout_centerInParent="true"
+                                    android:layout_alignTop="@+id/picker"
+                                    android:layout_below="@+id/picker"
+                                    android:layout_alignLeft="@+id/picker"
+                                    android:layout_alignRight="@+id/picker"
+                                    android:layout_alignBaseline="@+id/picker"
+                                    android:layout_alignBottom="@+id/picker"
+                                    android:layout_margin="10dp"
+                                    android:padding="10dp" />
+
+
+                                <com.jesusm.holocircleseekbar.lib.HoloCircleSeekBar
+                                    android:layout_centerInParent="true"
+                                    android:id="@+id/picker"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:max="100"
+                                    app:pointer_color="#ffa73e3e"
+                                    app:pointer_halo_color="#ff696969"
+                                    app:pointer_size="10dp"
+                                    app:text_color="#00000000"
+                                    app:text_size="0sp"
+                                    app:wheel_active_color="#DE5252"
+                                    app:wheel_unactive_color="#939393"/>
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/album_art_click"
+                                    android:layout_centerInParent="true"
+                                    android:layout_alignTop="@+id/picker"
+                                    android:layout_below="@+id/picker"
+                                    android:layout_alignLeft="@+id/picker"
+                                    android:layout_alignRight="@+id/picker"
+                                    android:layout_alignBaseline="@+id/picker"
+                                    android:layout_alignBottom="@+id/picker"
+                                    android:layout_margin="40dp" />
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.yellowsoft.radioapp.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bader Alshuaibi"
+                                android:id="@+id/artist_name"
+                                android:textColor="#FFFFFF"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="0dp"
+                                android:layout_centerInParent="true" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/lyrics_btn"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/lyrics"
+                                android:layout_toRightOf="@+id/artist_name" />
+                        </RelativeLayout>
+
+                        <com.yellowsoft.radioapp.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tadry Habebe"
+                            android:id="@+id/song_name"
+                            android:textColor="#FFFFFF" />
+
+                        <com.yellowsoft.radioapp.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Views : 85,746"
+                            android:id="@+id/view_count"
+                            android:textColor="#FFFFFF"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:baselineAligned="false">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="25dp"
+                                    android:id="@+id/download_btn"
+                                    android:src="@drawable/download"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="5dp" />
+
+                                <ProgressBar
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:id="@+id/progressBar"
+                                    android:layout_centerInParent="true"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:id="@+id/youtube_link"
+                                android:src="@drawable/youtube_link"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="25dp"
+                                android:text="iTunes"
+                                android:id="@+id/itunes_link"
+                                android:textColor="#FFFFFF"
+                                android:src="@drawable/itunes"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/player_footer_bg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <!-- Player Buttons -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <!-- Previous Button -->
+                            <ImageButton
+                                android:id="@+id/btnRepeat"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/btn_repeat"
+                                android:background="@null"
+                                android:layout_weight="1"
+                                android:scaleType="fitCenter" />
+
+                            <ImageButton
+                                android:id="@+id/btnPrevious"
+                                android:src="@drawable/btn_previous"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:layout_weight="1"
+                                android:scaleType="fitCenter" />
+                            <!-- Backward Button -->
+                            <ImageButton
+                                android:id="@+id/btnBackward"
+                                android:src="@drawable/btn_backward"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:layout_weight="1"
+                                android:visibility="gone" />
+                            <!-- Play Button -->
+                            <ImageButton
+                                android:id="@+id/btnPlay"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:src="@drawable/btn_play"
+                                android:scaleType="fitCenter" />
+                            <!-- Forward Button -->
+                            <ImageButton
+                                android:id="@+id/btnForward"
+                                android:src="@drawable/btn_forward"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:layout_weight="1"
+                                android:visibility="gone" />
+                            <!-- Next Button -->
+                            <ImageButton
+                                android:id="@+id/btnNext"
+                                android:src="@drawable/btn_next"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:layout_weight="1"
+                                android:scaleType="fitCenter" />
+
+                            <ImageButton
+                                android:id="@+id/btnShuffle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/btn_shuffle"
+                                android:background="@null"
+                                android:layout_weight="1"
+                                android:scaleType="fitCenter" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal">
+
+                    <com.yellowsoft.radioapp.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="description"
+                        android:id="@+id/lyrics"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+
+            </ViewFlipper>
+
+            <!-- Player Footer -->
+
+            <!-- Progress Bar/Seek bar -->
+
+            <!-- Timer Display -->
+
+            <!-- Repeat / Shuffle buttons -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/timerDisplay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+            <!-- Current Duration Label -->
+            <com.yellowsoft.radioapp.MyTextView
+                android:id="@+id/songCurrentDurationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:text="00:00" />
+            <!-- Total Duration Label -->
+            <app.minimize.com.seek_bar_compat.SeekBarCompat
+                android:id="@+id/materialSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxHeight="300sp"
+                app:progressColor="#DE5252"
+                app:progressBackgroundColor="#000"
+                app:thumbColor="#F8F8F8"
+                app:thumbAlpha="1.0"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1" />
+            <com.yellowsoft.radioapp.MyTextView
+                android:id="@+id/songTotalDurationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:text="00:00" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<dev.dworks.libs.astickyheader.ui.HeaderLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="21dp">
+
+    <com.yellowsoft.radioapp.MyTextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textIsSelectable="false"
+        android:text="sqwsqws" />
+
+</dev.dworks.libs.astickyheader.ui.HeaderLayout>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/player_bg"
+        android:orientation="vertical">
+
+        <!-- Player Header -->
+        <LinearLayout
+            android:id="@+id/player_header_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <!-- Song Title -->
+            <com.yellowsoft.radioapp.MyTextView
+                android:id="@+id/songTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#04b3d2"
+                android:textSize="16dp"
+                android:paddingLeft="10dp"
+                android:textStyle="bold"
+                android:text="The Good, The Bad And The Ugly"
+                android:layout_gravity="center_vertical" />"
+
+            <!-- Playlist button -->
+            <ImageButton
+                android:id="@+id/btnPlaylist"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:src="@drawable/btn_playlist"
+                android:background="@null" />
+        </LinearLayout>
+
+        <!-- Song Thumbnail Image -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:src="@drawable/banner_ad"
+                android:adjustViewBounds="true" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/songThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:layout_weight="1">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/adele"
+                android:id="@+id/album_art"
+                android:layout_centerInParent="true"
+                android:layout_alignTop="@+id/picker"
+                android:layout_below="@+id/picker"
+                android:layout_alignLeft="@+id/picker"
+                android:layout_alignRight="@+id/picker"
+                android:layout_alignBaseline="@+id/picker"
+                android:layout_alignBottom="@+id/picker"
+                android:layout_margin="10dp"
+                android:padding="10dp" />
+            <com.jesusm.holocircleseekbar.lib.HoloCircleSeekBar
+                android:layout_centerInParent="true"
+                android:id="@+id/picker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:max="100"
+                app:pointer_color="#ffa73e3e"
+                app:pointer_halo_color="#ff696969"
+                app:pointer_size="10dp"
+                app:text_color="#00000000"
+                app:text_size="0sp"
+                app:wheel_active_color="#DE5252"
+                app:wheel_unactive_color="#939393"/>
+        </RelativeLayout>
+
+        <!-- Player Footer -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <com.yellowsoft.radioapp.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bader Alshuaibi"
+                android:id="@+id/info1"
+                android:textColor="#FFFFFF" />
+
+            <com.yellowsoft.radioapp.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tadry Habebe"
+                android:id="@+id/info2"
+                android:textColor="#FFFFFF" />
+
+            <com.yellowsoft.radioapp.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Views : 85,746"
+                android:id="@+id/info3"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:id="@+id/download_btn"
+                    android:src="@drawable/download"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="5dp" />
+
+                <ProgressBar
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/progressBar"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:id="@+id/imageView3"
+                android:src="@drawable/youtube_link"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp" />
+
+            <com.yellowsoft.radioapp.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="iTunes"
+                android:id="@+id/textView"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <com.yellowsoft.radioapp.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="artist"
+                android:id="@+id/artist"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <com.yellowsoft.radioapp.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="playlist"
+                android:id="@+id/playlist"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/player_footer_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+            <!-- Player Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <!-- Previous Button -->
+                <ImageButton
+                    android:id="@+id/btnRepeat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/btn_repeat"
+                    android:background="@null"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btnPrevious"
+                    android:src="@drawable/btn_previous"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:layout_weight="1" />
+                <!-- Backward Button -->
+                <ImageButton
+                    android:id="@+id/btnBackward"
+                    android:src="@drawable/btn_backward"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+                <!-- Play Button -->
+                <ImageButton
+                    android:id="@+id/btnPlay"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:src="@drawable/btn_play" />
+                <!-- Forward Button -->
+                <ImageButton
+                    android:id="@+id/btnForward"
+                    android:src="@drawable/btn_forward"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+                <!-- Next Button -->
+                <ImageButton
+                    android:id="@+id/btnNext"
+                    android:src="@drawable/btn_next"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/btnShuffle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/btn_shuffle"
+                    android:background="@null"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Progress Bar/Seek bar -->
+
+        <!-- Timer Display -->
+        <LinearLayout
+            android:id="@+id/timerDisplay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+            <!-- Current Duration Label -->
+            <com.yellowsoft.radioapp.MyTextView
+                android:id="@+id/songCurrentDurationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:text="00:00" />
+            <!-- Total Duration Label -->
+            <app.minimize.com.seek_bar_compat.SeekBarCompat
+                android:id="@+id/materialSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxHeight="300sp"
+                app:progressColor="#DE5252"
+                app:progressBackgroundColor="#000"
+                app:thumbColor="#F8F8F8"
+                app:thumbAlpha="1.0"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/songTotalDurationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:text="00:00" />
+        </LinearLayout>
+
+        <!-- Repeat / Shuffle buttons -->
+    </LinearLayout>
+
+
+</LinearLayout>
